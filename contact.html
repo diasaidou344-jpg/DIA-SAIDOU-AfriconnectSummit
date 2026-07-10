@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inscrivez-vous à AfriConnect Summit 2026 - Formulaire d'inscription et informations pratiques." />
+
+  <title>Inscription & Contact - AfriConnect Summit 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Notre feuille de style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="overlay-menu" id="overlay-menu" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="conteneur navbar__interieur">
+        <a href="index.html" class="navbar__logo" aria-label="AfriConnect Summit - Retour à l'accueil">
+          AfriConnect <span>Summit</span>
+        </a>
+        <ul class="navbar__liens" id="menu-liens" role="list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button class="btn-theme" id="btn-theme" aria-label="Basculer le mode sombre">
+              <i class="bi bi-sun-fill icone-soleil" aria-hidden="true"></i>
+              <i class="bi bi-moon-fill icone-lune" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- HERO INTERNE -->
+    <section class="hero-interne" aria-label="En-tête de la page contact">
+      <h1>Inscription &amp; Contact</h1>
+      <nav class="fil-ariane" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Contact</span>
+      </nav>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION FORMULAIRE D'INSCRIPTION
+         Flexbox deux colonnes : formulaire à gauche, infos à droite
+    ============================================================ -->
+    <section class="contact-section" aria-label="Formulaire d'inscription">
+      <div class="conteneur">
+
+        <div class="en-tete-section">
+          <span class="badge animer">Rejoignez-nous</span>
+          <h2 class="titre-section animer">Réservez votre place</h2>
+          <p class="sous-titre-section animer">
+            Remplissez le formulaire ci-dessous pour vous inscrire à AfriConnect Summit 2026.
+            Tous les champs marqués d'un <strong>*</strong> sont obligatoires.
+          </p>
+        </div>
+
+        <!-- Flexbox : formulaire à gauche, infos à droite -->
+        <div class="contact__contenu animer">
+
+          <!-- COLONNE GAUCHE : Formulaire -->
+          <div class="contact__formulaire">
+            <form id="formulaire-inscription" novalidate aria-label="Formulaire d'inscription à AfriConnect Summit">
+
+              <!-- Nom complet -->
+              <div class="champ-groupe">
+                <label for="nom" class="requis">Nom complet</label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Ex : Amara Diallo"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="erreur-nom"
+                />
+                <span class="message-erreur" id="erreur-nom" role="alert"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="champ-groupe">
+                <label for="email" class="requis">Adresse email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Ex : amara@exemple.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="erreur-email"
+                />
+                <span class="message-erreur" id="erreur-email" role="alert"></span>
+              </div>
+
+              <!-- Téléphone -->
+              <div class="champ-groupe">
+                <label for="telephone" class="requis">Numéro de téléphone</label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  placeholder="Ex : +221 77 000 00 00"
+                  required
+                  autocomplete="tel"
+                  aria-required="true"
+                  aria-describedby="erreur-telephone"
+                />
+                <span class="message-erreur" id="erreur-telephone" role="alert"></span>
+              </div>
+
+              <!-- Type de participation -->
+              <div class="champ-groupe">
+                <label for="participation" class="requis">Type de participation</label>
+                <select
+                  id="participation"
+                  name="participation"
+                  required
+                  aria-required="true"
+                  aria-describedby="erreur-participation"
+                >
+                  <option value="">-- Choisissez votre statut --</option>
+                  <option value="developpeur">Développeur / Ingénieur</option>
+                  <option value="entrepreneur">Entrepreneur / Fondateur</option>
+                  <option value="investisseur">Investisseur</option>
+                  <option value="etudiant">Étudiant</option>
+                  <option value="designer">Designer / Créatif</option>
+                  <option value="manager">Manager / Directeur</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <span class="message-erreur" id="erreur-participation" role="alert"></span>
+              </div>
+
+              <!-- Pays africain (minimum 10 pays) -->
+              <div class="champ-groupe">
+                <label for="pays" class="requis">Pays d'origine</label>
+                <select
+                  id="pays"
+                  name="pays"
+                  required
+                  aria-required="true"
+                  aria-describedby="erreur-pays"
+                >
+                  <option value="">-- Sélectionnez votre pays --</option>
+                  <optgroup label="Afrique de l'Ouest">
+                    <option value="senegal">🇸🇳 Sénégal</option>
+                    <option value="ghana">🇬🇭 Ghana</option>
+                    <option value="nigeria">🇳🇬 Nigeria</option>
+                    <option value="cote-ivoire">🇨🇮 Côte d'Ivoire</option>
+                    <option value="mali">🇲🇱 Mali</option>
+                    <option value="burkina">🇧🇫 Burkina Faso</option>
+                    <option value="guinee">🇬🇳 Guinée</option>
+                  </optgroup>
+                  <optgroup label="Afrique du Nord">
+                    <option value="maroc">🇲🇦 Maroc</option>
+                    <option value="tunisie">🇹🇳 Tunisie</option>
+                    <option value="algerie">🇩🇿 Algérie</option>
+                    <option value="egypte">🇪🇬 Égypte</option>
+                  </optgroup>
+                  <optgroup label="Afrique de l'Est">
+                    <option value="kenya">🇰🇪 Kenya</option>
+                    <option value="rwanda">🇷🇼 Rwanda</option>
+                    <option value="ethiopie">🇪🇹 Éthiopie</option>
+                    <option value="tanzanie">🇹🇿 Tanzanie</option>
+                  </optgroup>
+                  <optgroup label="Afrique Centrale & Australe">
+                    <option value="cameroun">🇨🇲 Cameroun</option>
+                    <option value="afrique-sud">🇿🇦 Afrique du Sud</option>
+                    <option value="rdc">🇨🇩 RD Congo</option>
+                  </optgroup>
+                  <option value="autre-pays">Autre pays</option>
+                </select>
+                <span class="message-erreur" id="erreur-pays" role="alert"></span>
+              </div>
+
+              <!-- Message / Motivation -->
+              <div class="champ-groupe">
+                <label for="message" class="requis">Message / Motivation (min. 20 caractères)</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Expliquez pourquoi vous souhaitez participer à AfriConnect Summit 2026..."
+                  required
+                  aria-required="true"
+                  aria-describedby="erreur-message"
+                ></textarea>
+                <span class="message-erreur" id="erreur-message" role="alert"></span>
+              </div>
+
+              <!-- Bouton d'envoi -->
+              <button type="submit" class="btn btn-primaire" style="width: 100%; justify-content: center;">
+                <i class="bi bi-send-fill" aria-hidden="true"></i>
+                Envoyer ma candidature
+              </button>
+
+            </form>
+
+            <!-- Message de succès (caché, affiché après soumission valide) -->
+            <div class="message-succes" id="message-succes" role="alert" aria-live="polite">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+              <h3>Candidature envoyée !</h3>
+              <p>
+                Merci pour votre inscription à AfriConnect Summit 2026.
+                Vous recevrez une confirmation par email dans les 48h.
+                À très bientôt à Dakar !
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- COLONNE DROITE : Informations pratiques -->
+          <aside class="contact__infos">
+
+            <div class="info-contact">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <h4>Lieu de la conférence</h4>
+              <p>
+                Centre International de Conférences Abdou Diouf<br />
+                Diamniadio, Dakar, Sénégal
+              </p>
+            </div>
+
+            <div class="info-contact">
+              <i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+              <h4>Dates</h4>
+              <p>
+                15, 16 et 17 novembre 2026<br />
+                Ouverture à 9h00 chaque matin
+              </p>
+            </div>
+
+            <div class="info-contact">
+              <i class="bi bi-ticket-perforated-fill" aria-hidden="true"></i>
+              <h4>Tarifs</h4>
+              <p>
+                <strong>Étudiant :</strong> Gratuit<br />
+                <strong>Professionnel :</strong> 50 000 FCFA<br />
+                <strong>Entreprise :</strong> 150 000 FCFA<br />
+                <em>Les places sont limitées !</em>
+              </p>
+            </div>
+
+            <div class="info-contact">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+              <h4>Contact direct</h4>
+              <p>
+                contact@africonnect-summit.com<br />
+                +221 77 000 00 00<br />
+                <small>(Du lundi au vendredi, 9h-18h)</small>
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ - ACCORDÉON CSS PUR
+         Fonctionne avec :focus-within - aucun JavaScript utilisé ici
+    ============================================================ -->
+    <section class="faq" aria-label="Questions fréquentes">
+      <div class="conteneur">
+
+        <div class="en-tete-section">
+          <span class="badge animer">FAQ</span>
+          <h2 class="titre-section animer">Questions fréquentes</h2>
+          <p class="sous-titre-section animer">
+            Vous avez des questions ? Nous avons les réponses.
+          </p>
+        </div>
+
+        <div class="faq__liste animer">
+
+          <!-- Question 1 -->
+          <div class="faq__item">
+            <!-- Le tabindex permet la navigation clavier et active :focus-within -->
+            <button class="faq__question" tabindex="0">
+              <span>Les étudiants peuvent-ils participer gratuitement ?</span>
+              <i class="bi bi-chevron-down faq__fleche" aria-hidden="true"></i>
+            </button>
+            <div class="faq__reponse">
+              <p>
+                Oui ! AfriConnect Summit est engagé pour l'inclusion des jeunes talents.
+                Les étudiants avec une carte d'étudiant valide peuvent participer gratuitement
+                à toutes les conférences et ateliers. Il suffit de s'inscrire en choisissant
+                "Étudiant" dans le formulaire d'inscription.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq__item">
+            <button class="faq__question" tabindex="0">
+              <span>Y a-t-il des hébergements disponibles pour les participants venus de loin ?</span>
+              <i class="bi bi-chevron-down faq__fleche" aria-hidden="true"></i>
+            </button>
+            <div class="faq__reponse">
+              <p>
+                Nous avons négocié des tarifs préférentiels avec plusieurs hôtels partenaires
+                à Dakar et Diamniadio. Un code de réduction sera envoyé avec votre confirmation
+                d'inscription. Des navettes gratuites entre les hôtels partenaires et le lieu
+                de la conférence seront également disponibles chaque matin.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq__item">
+            <button class="faq__question" tabindex="0">
+              <span>La conférence est-elle disponible en ligne pour ceux qui ne peuvent pas venir ?</span>
+              <i class="bi bi-chevron-down faq__fleche" aria-hidden="true"></i>
+            </button>
+            <div class="faq__reponse">
+              <p>
+                Toutes les keynotes de la Grande Scène seront retransmises en direct
+                sur notre chaîne YouTube et notre page LinkedIn. Les ateliers pratiques
+                et les sessions de networking restent exclusifs aux participants sur place.
+                Les replays seront disponibles gratuitement 48h après la conférence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq__item">
+            <button class="faq__question" tabindex="0">
+              <span>Comment puis-je proposer ma startup au Pitch Contest ?</span>
+              <i class="bi bi-chevron-down faq__fleche" aria-hidden="true"></i>
+            </button>
+            <div class="faq__reponse">
+              <p>
+                Les candidatures pour le Pitch Contest sont ouvertes jusqu'au 31 octobre 2026.
+                Envoyez votre dossier (présentation de la startup, chiffres clés, problème résolu)
+                à pitchcontest@africonnect-summit.com. Un jury de présélection choisira
+                8 startups finalistes qui pitcheront devant des investisseurs lors du Jour 2.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq__item">
+            <button class="faq__question" tabindex="0">
+              <span>Y a-t-il un certificat de participation à l'issue de la conférence ?</span>
+              <i class="bi bi-chevron-down faq__fleche" aria-hidden="true"></i>
+            </button>
+            <div class="faq__reponse">
+              <p>
+                Oui, tous les participants inscrits et présents recevront un certificat
+                de participation numérique (format PDF + LinkedIn Badge) dans les 7 jours
+                suivant la clôture de la conférence. Pour les ateliers techniques,
+                un certificat spécifique sera délivré en plus du certificat général.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CARTE GOOGLE MAPS
+         iframe pointant vers Dakar, Sénégal
+    ============================================================ -->
+    <section class="carte-maps" aria-label="Localisation de la conférence">
+      <div class="conteneur">
+
+        <div class="en-tete-section">
+          <span class="badge animer">Nous trouver</span>
+          <h2 class="titre-section animer">Où se déroule la conférence ?</h2>
+          <p class="sous-titre-section animer">
+            Centre International de Conférences Abdou Diouf — Diamniadio, Dakar, Sénégal
+          </p>
+        </div>
+
+        <!-- Carte Google Maps - Diamniadio, Dakar -->
+        <div class="animer">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15437.88!2d-17.1842!3d14.7260!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173ec1b31f4e1%3A0x5e0a56f3478e4b95!2sDiamniadio%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+            title="Carte montrant la localisation du Centre de Conférences à Diamniadio, Dakar, Sénégal"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Carte Google Maps de Diamniadio, Dakar, Sénégal"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="conteneur">
+      <div class="footer__grille">
+        <div class="footer__colonne">
+          <h4>AfriConnect Summit</h4>
+          <p>La conférence tech panafricaine qui réunit chaque année les meilleurs talents du numérique africain.</p>
+          <div class="reseaux-sociaux" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__colonne">
+          <h4>Navigation</h4>
+          <nav class="footer__liens-rapides" aria-label="Navigation dans le pied de page">
+            <a href="index.html">Accueil</a>
+            <a href="programme.html">Programme</a>
+            <a href="intervenants.html">Intervenants</a>
+            <a href="contact.html">Inscription</a>
+          </nav>
+        </div>
+        <div class="footer__colonne">
+          <h4>Contact</h4>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i> Diamniadio, Dakar, Sénégal</p>
+          <p style="margin-top: 0.5rem;"><i class="bi bi-envelope" aria-hidden="true"></i> contact@africonnect-summit.com</p>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>&copy; <span class="annee-dynamique"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <p>Fait avec <span aria-label="amour">❤️</span> pour l'Afrique numérique</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-haut" id="btn-haut" aria-label="Retourner en haut de la page">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

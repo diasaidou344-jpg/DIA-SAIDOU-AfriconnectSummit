@@ -1,0 +1,50 @@
+/* ============================================================
+   AfriConnect Summit - style.css
+   Début : reset et variables de base
+   ============================================================ */
+
+:root {
+  --couleur-primaire: #1a7c5e;
+  --couleur-secondaire: #f5a623;
+  --couleur-accent: #e84855;
+  --couleur-sombre: #0f1923;
+  --fond-principal: #ffffff;
+  --fond-secondaire: #f7f8fa;
+  --fond-carte: #ffffff;
+  --texte-principal: #1a1a2e;
+  --texte-secondaire: #555770;
+  --bordure: #e0e4ef;
+  --police-titre: 'Syne', sans-serif;
+  --police-corps: 'Inter', sans-serif;
+  --espacement-sm: 1rem;
+  --espacement-md: 2rem;
+  --espacement-lg: 4rem;
+  --espacement-xl: 6rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-rond: 50px;
+  --transition: all 0.3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--police-corps); background-color: var(--fond-principal); color: var(--texte-principal); line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; transition: var(--transition); }
+ul { list-style: none; }
+
+.conteneur { max-width: 1200px; margin: 0 auto; padding: 0 var(--espacement-md); }
+
+/* NAVBAR */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 1.2rem 0; transition: var(--transition); }
+.navbar__interieur { display: flex; align-items: center; justify-content: space-between; }
+.navbar__logo { font-family: var(--police-titre); font-size: 1.25rem; font-weight: 800; color: var(--couleur-primaire); }
+.navbar__logo span { color: var(--couleur-secondaire); }
+.navbar__liens { display: flex; align-items: center; gap: var(--espacement-md); }
+.navbar__liens a { font-size: 0.9rem; font-weight: 500; }
+.navbar__liens a:hover { color: var(--couleur-primaire); }
+
+/* HERO provisoire */
+.hero { min-height: 100vh; background: linear-gradient(135deg, #0f1923 0%, #1a3a2e 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem; }
+.hero__titre { font-family: var(--police-titre); font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 1rem; }
+.hero__sous-titre { color: rgba(255,255,255,0.7); font-size: 1.1rem; }

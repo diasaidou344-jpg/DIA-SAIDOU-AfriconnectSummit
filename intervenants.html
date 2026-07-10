@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Découvrez les 9 intervenants experts d'AfriConnect Summit 2026 - IA, Business, Design et Data." />
+
+  <title>Intervenants - AfriConnect Summit 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Notre feuille de style -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="overlay-menu" id="overlay-menu" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="conteneur navbar__interieur">
+        <a href="index.html" class="navbar__logo" aria-label="AfriConnect Summit - Retour à l'accueil">
+          AfriConnect <span>Summit</span>
+        </a>
+        <ul class="navbar__liens" id="menu-liens" role="list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button class="btn-theme" id="btn-theme" aria-label="Basculer le mode sombre">
+              <i class="bi bi-sun-fill icone-soleil" aria-hidden="true"></i>
+              <i class="bi bi-moon-fill icone-lune" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- HERO INTERNE -->
+    <section class="hero-interne" aria-label="En-tête de la page intervenants">
+      <h1>Nos intervenants</h1>
+      <nav class="fil-ariane" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Intervenants</span>
+      </nav>
+    </section>
+
+
+    <!-- ============================================================
+         SECTION INTERVENANTS AVEC FILTRAGE
+         Boutons de filtre + CSS Grid 3 colonnes
+    ============================================================ -->
+    <section class="intervenants-page" aria-label="Liste des intervenants">
+      <div class="conteneur">
+
+        <div class="en-tete-section">
+          <span class="badge animer">48 experts</span>
+          <h2 class="titre-section animer">Les voix de l'Afrique numérique</h2>
+          <p class="sous-titre-section animer">
+            Utilisez les filtres ci-dessous pour explorer les intervenants
+            selon leur domaine d'expertise.
+          </p>
+        </div>
+
+        <!-- Boutons de filtre par thématique -->
+        <div class="filtres animer" role="group" aria-label="Filtrer les intervenants par thématique">
+          <button class="filtre-btn actif" data-filtre="tous">
+            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+            Tous
+          </button>
+          <button class="filtre-btn" data-filtre="ia-tech">
+            <i class="bi bi-cpu" aria-hidden="true"></i>
+            IA &amp; Tech
+          </button>
+          <button class="filtre-btn" data-filtre="business">
+            <i class="bi bi-briefcase" aria-hidden="true"></i>
+            Business
+          </button>
+          <button class="filtre-btn" data-filtre="design">
+            <i class="bi bi-palette" aria-hidden="true"></i>
+            Design
+          </button>
+          <button class="filtre-btn" data-filtre="data">
+            <i class="bi bi-bar-chart" aria-hidden="true"></i>
+            Data
+          </button>
+        </div>
+
+        <!-- CSS Grid 3 colonnes (desktop) / 2 tablette / 1 mobile -->
+        <div class="intervenants__grille-grande" id="grille-intervenants">
+
+          <!-- Intervenant 1 : IA & Tech -->
+          <article class="intervenant__carte animer" data-categorie="ia-tech">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=280&fit=crop&crop=face"
+              alt="Fatima El Mansouri, Directrice IA chez InnoMaghreb, Maroc"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Fatima El Mansouri</p>
+              <p class="intervenant__poste">Directrice IA, InnoMaghreb</p>
+              <p class="intervenant__pays">🇲🇦 Maroc</p>
+              <span class="tag-thematique">IA &amp; Tech</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 2 : Business -->
+          <article class="intervenant__carte animer" data-categorie="business">
+            <img
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=280&fit=crop&crop=face"
+              alt="Kwame Asante, CEO de PayAfrika, Ghana"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Kwame Asante</p>
+              <p class="intervenant__poste">CEO, PayAfrika</p>
+              <p class="intervenant__pays">🇬🇭 Ghana</p>
+              <span class="tag-thematique">Business</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 3 : Design -->
+          <article class="intervenant__carte animer" data-categorie="design">
+            <img
+              src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&h=280&fit=crop&crop=face"
+              alt="Yasmine Ben Ali, Lead Designer chez DesignHub Tunis, Tunisie"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Yasmine Ben Ali</p>
+              <p class="intervenant__poste">Lead Designer, DesignHub Tunis</p>
+              <p class="intervenant__pays">🇹🇳 Tunisie</p>
+              <span class="tag-thematique">Design</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 4 : Data -->
+          <article class="intervenant__carte animer" data-categorie="data">
+            <img
+              src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=280&fit=crop&crop=face"
+              alt="Ngozi Eze, Data Engineer chez LagosData, Nigeria"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Ngozi Eze</p>
+              <p class="intervenant__poste">Data Engineer, LagosData</p>
+              <p class="intervenant__pays">🇳🇬 Nigeria</p>
+              <span class="tag-thematique">Data</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 5 : IA & Tech -->
+          <article class="intervenant__carte animer" data-categorie="ia-tech">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=280&fit=crop&crop=face"
+              alt="David Okonkwo, Lead Developer chez NigeriaHub, Nigeria"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">David Okonkwo</p>
+              <p class="intervenant__poste">Lead Developer, NigeriaHub</p>
+              <p class="intervenant__pays">🇳🇬 Nigeria</p>
+              <span class="tag-thematique">IA &amp; Tech</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 6 : Business -->
+          <article class="intervenant__carte animer" data-categorie="business">
+            <img
+              src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=280&fit=crop&crop=face"
+              alt="Amara Diallo, Fondatrice de TechWomen Africa, Sénégal"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Amara Diallo</p>
+              <p class="intervenant__poste">Fondatrice, TechWomen Africa</p>
+              <p class="intervenant__pays">🇸🇳 Sénégal</p>
+              <span class="tag-thematique">Business</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 7 : Data -->
+          <article class="intervenant__carte animer" data-categorie="data">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=280&fit=crop&crop=face"
+              alt="Ibrahim Traoré, Expert cybersécurité chez SecureAfrica, Côte d'Ivoire"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Ibrahim Traoré</p>
+              <p class="intervenant__poste">Expert Cybersécurité, SecureAfrica</p>
+              <p class="intervenant__pays">🇨🇮 Côte d'Ivoire</p>
+              <span class="tag-thematique">Data</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 8 : Design -->
+          <article class="intervenant__carte animer" data-categorie="design">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=280&fit=crop&crop=face"
+              alt="Aïssatou Sow, UX Researcher chez MobileFirst Dakar, Sénégal"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Aïssatou Sow</p>
+              <p class="intervenant__poste">UX Researcher, MobileFirst Dakar</p>
+              <p class="intervenant__pays">🇸🇳 Sénégal</p>
+              <span class="tag-thematique">Design</span>
+            </div>
+          </article>
+
+          <!-- Intervenant 9 : Business -->
+          <article class="intervenant__carte animer" data-categorie="business">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=280&fit=crop&crop=face"
+              alt="Kofi Mensah, Fondateur de EduCode Ghana, Ghana"
+            />
+            <div class="intervenant__info">
+              <p class="intervenant__nom">Kofi Mensah</p>
+              <p class="intervenant__poste">Fondateur, EduCode Ghana</p>
+              <p class="intervenant__pays">🇬🇭 Ghana</p>
+              <span class="tag-thematique">Business</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="conteneur">
+      <div class="footer__grille">
+        <div class="footer__colonne">
+          <h4>AfriConnect Summit</h4>
+          <p>La conférence tech panafricaine qui réunit chaque année les meilleurs talents du numérique africain.</p>
+          <div class="reseaux-sociaux" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer__colonne">
+          <h4>Navigation</h4>
+          <nav class="footer__liens-rapides" aria-label="Navigation dans le pied de page">
+            <a href="index.html">Accueil</a>
+            <a href="programme.html">Programme</a>
+            <a href="intervenants.html">Intervenants</a>
+            <a href="contact.html">Inscription</a>
+          </nav>
+        </div>
+        <div class="footer__colonne">
+          <h4>Contact</h4>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i> Centre International de Conférences, Dakar, Sénégal</p>
+          <p style="margin-top: 0.5rem;"><i class="bi bi-envelope" aria-hidden="true"></i> contact@africonnect-summit.com</p>
+        </div>
+      </div>
+      <div class="footer__bas">
+        <p>&copy; <span class="annee-dynamique"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <p>Fait avec <span aria-label="amour">❤️</span> pour l'Afrique numérique</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-haut" id="btn-haut" aria-label="Retourner en haut de la page">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
