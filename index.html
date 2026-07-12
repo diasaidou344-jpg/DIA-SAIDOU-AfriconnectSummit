@@ -1,43 +1,106 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AfriConnect Summit 2026</title>
+  <meta name="description" content="AfriConnect Summit 2026 - La conférence tech panafricaine." />
+  <title>AfriConnect Summit 2026 - Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <div class="overlay-menu" id="overlay-menu"></div>
+
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigation principale">
       <div class="conteneur navbar__interieur">
-        <a href="index.html" class="navbar__logo">AfriConnect <span>Summit</span></a>
+        <a href="index.html" class="navbar__logo" aria-label="AfriConnect Summit">AfriConnect <span>Summit</span></a>
         <ul class="navbar__liens" id="menu-liens">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="programme.html">Programme</a></li>
           <li><a href="intervenants.html">Intervenants</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button class="btn-theme" id="btn-theme" aria-label="Basculer le mode sombre">
+              <i class="bi bi-sun-fill icone-soleil"></i>
+              <i class="bi bi-moon-fill icone-lune"></i>
+            </button>
+          </li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- Hero - en cours de construction -->
-    <section class="hero">
+
+    <section class="hero" aria-label="Présentation de la conférence">
       <div class="hero__contenu">
-        <h1 class="hero__titre">La plus grande conférence tech panafricaine</h1>
-        <p class="hero__sous-titre">Dakar, Sénégal · 15–17 novembre 2026</p>
+        <div class="hero__badge"><span class="badge">🌍 Édition 2026</span></div>
+        <h1 class="hero__titre">La plus grande conférence tech<br /><span class="accent">panafricaine</span></h1>
+        <p class="hero__sous-titre"><i class="bi bi-geo-alt-fill"></i> Dakar, Sénégal &nbsp;·&nbsp; <i class="bi bi-calendar3"></i> 15–17 novembre 2026</p>
+        <div class="hero__boutons">
+          <a href="contact.html" class="btn btn-primaire"><i class="bi bi-ticket-perforated"></i> Réserver ma place</a>
+          <a href="programme.html" class="btn btn-secondaire"><i class="bi bi-calendar-week"></i> Voir le programme</a>
+        </div>
+        <div class="compte-rebours" role="timer" aria-label="Compte à rebours">
+          <div class="compte-rebours__unite"><span class="compte-rebours__nombre" id="cr-jours">--</span><span class="compte-rebours__label">Jours</span></div>
+          <div class="compte-rebours__unite"><span class="compte-rebours__nombre" id="cr-heures">--</span><span class="compte-rebours__label">Heures</span></div>
+          <div class="compte-rebours__unite"><span class="compte-rebours__nombre" id="cr-minutes">--</span><span class="compte-rebours__label">Minutes</span></div>
+          <div class="compte-rebours__unite"><span class="compte-rebours__nombre" id="cr-secondes">--</span><span class="compte-rebours__label">Secondes</span></div>
+        </div>
       </div>
     </section>
+
+    <section class="chiffres" aria-label="Chiffres clés">
+      <div class="conteneur">
+        <div class="en-tete-section">
+          <span class="badge animer">En chiffres</span>
+          <h2 class="titre-section animer">AfriConnect Summit en quelques chiffres</h2>
+        </div>
+        <div class="chiffres__grille">
+          <article class="chiffres__carte animer"><div class="chiffres__nombre" data-valeur="1200" data-prefix="+">+0</div><p class="chiffres__label">Participants attendus</p></article>
+          <article class="chiffres__carte animer"><div class="chiffres__nombre" data-valeur="48">0</div><p class="chiffres__label">Intervenants experts</p></article>
+          <article class="chiffres__carte animer"><div class="chiffres__nombre" data-valeur="3">0</div><p class="chiffres__label">Jours de conférence</p></article>
+          <article class="chiffres__carte animer"><div class="chiffres__nombre" data-valeur="12">0</div><p class="chiffres__label">Pays représentés</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pourquoi" aria-label="Raisons de participer">
+      <div class="conteneur">
+        <div class="en-tete-section">
+          <span class="badge animer">Pourquoi venir ?</span>
+          <h2 class="titre-section animer">Des raisons de ne pas manquer cet événement</h2>
+        </div>
+        <div class="pourquoi__liste">
+          <article class="pourquoi__argument animer"><div class="pourquoi__icone">🤝</div><h3>Réseau de qualité</h3><p>Rencontrez les acteurs clés de l'écosystème tech africain venus de 12 pays du continent.</p></article>
+          <article class="pourquoi__argument animer"><div class="pourquoi__icone">🧠</div><h3>Conférences de haut niveau</h3><p>48 experts partagent leurs expériences sur l'IA, la fintech, le design et l'entrepreneuriat.</p></article>
+          <article class="pourquoi__argument animer"><div class="pourquoi__icone">🚀</div><h3>Opportunités concrètes</h3><p>Pitchez votre projet, rejoignez des hackathons ou découvrez des offres d'emploi.</p></article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="conteneur">
-      <p>&copy; 2026 AfriConnect Summit</p>
+      <div class="footer__grille">
+        <div class="footer__colonne"><h4>AfriConnect Summit</h4><p>La conférence tech panafricaine qui réunit chaque année les meilleurs talents du numérique africain.</p></div>
+        <div class="footer__colonne"><h4>Navigation</h4><nav class="footer__liens-rapides"><a href="index.html">Accueil</a><a href="programme.html">Programme</a><a href="intervenants.html">Intervenants</a><a href="contact.html">Inscription</a></nav></div>
+        <div class="footer__colonne"><h4>Contact</h4><p>Dakar, Sénégal<br/>contact@africonnect-summit.com</p></div>
+      </div>
+      <div class="footer__bas"><p>&copy; <span class="annee-dynamique"></span> AfriConnect Summit.</p></div>
     </div>
   </footer>
 
+  <button class="btn-haut" id="btn-haut" aria-label="Retourner en haut"><i class="bi bi-arrow-up"></i></button>
+  <script src="js/main.js"></script>
 </body>
 </html>
