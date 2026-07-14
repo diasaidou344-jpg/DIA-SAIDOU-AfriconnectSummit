@@ -13,3 +13,9 @@ Site vitrine de la conférence tech panafricaine AfriConnect Summit 2026.
 - HTML5, CSS3, JavaScript Vanilla
 - Google Fonts, Bootstrap Icons
 - GitHub Pages
+
+## Pages
+- index.html - Accueil
+- programme.html - Programme 3 jours
+- intervenants.html - Grille des speakers
+- contact.html - Formulaire d'inscription

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programme - AfriConnect Summit 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="overlay-menu" id="overlay-menu"></div>
+  <header>
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="conteneur navbar__interieur">
+        <a href="index.html" class="navbar__logo">AfriConnect <span>Summit</span></a>
+        <ul class="navbar__liens" id="menu-liens">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button class="btn-theme" id="btn-theme" aria-label="Basculer le mode sombre"><i class="bi bi-sun-fill icone-soleil"></i><i class="bi bi-moon-fill icone-lune"></i></button></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero-interne">
+      <h1>Programme de la conférence</h1>
+      <nav class="fil-ariane" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a><span>/</span><span aria-current="page">Programme</span>
+      </nav>
+    </section>
+    <section class="programme" aria-label="Planning des 3 jours">
+      <div class="conteneur">
+        <div class="en-tete-section">
+          <span class="badge animer">Planning</span>
+          <h2 class="titre-section animer">3 jours pour changer la donne</h2>
+        </div>
+        <div class="onglets" role="tablist">
+          <button class="onglet-btn actif" data-onglet="jour1" role="tab">Jour 1 · 15 nov.</button>
+          <button class="onglet-btn" data-onglet="jour2" role="tab">Jour 2 · 16 nov.</button>
+          <button class="onglet-btn" data-onglet="jour3" role="tab">Jour 3 · 17 nov.</button>
+        </div>
+        <div class="onglet-contenu actif" id="onglet-jour1">
+          <div style="overflow-x:auto;">
+            <table class="tableau-programme">
+              <thead><tr><th>Heure</th><th>Session</th><th>Intervenant</th><th>Salle</th></tr></thead>
+              <tbody>
+                <tr><td class="heure-session">08h30</td><td><strong>Accueil & enregistrement</strong><br/><small>Distribution des badges</small></td><td>Équipe AfriConnect</td><td>Hall d'entrée</td></tr>
+                <tr><td class="heure-session">09h30</td><td><strong>Discours d'ouverture</strong><br/><small>L'Afrique numérique en 2026</small></td><td>Amara Diallo</td><td>Grande Scène</td></tr>
+                <tr><td class="heure-session">10h30</td><td><strong>L'IA générative au service de l'Afrique</strong><br/><small>Comment l'IA peut résoudre nos défis locaux</small></td><td>Fatima El Mansouri</td><td>Salle Alpha</td></tr>
+                <tr><td class="heure-session">12h00</td><td><strong>Pause déjeuner & Networking</strong></td><td>—</td><td>Espace Restauration</td></tr>
+                <tr><td class="heure-session">14h00</td><td><strong>Fintech en Afrique</strong><br/><small>Opportunités et défis réglementaires</small></td><td>Kwame Asante</td><td>Salle Beta</td></tr>
+                <tr><td class="heure-session">15h30</td><td><strong>Atelier : Créer une API REST en 90 min</strong><br/><small>30 places limitées</small></td><td>David Okonkwo</td><td>Lab Technique</td></tr>
+                <tr><td class="heure-session">17h30</td><td><strong>Cocktail de bienvenue</strong></td><td>—</td><td>Terrasse Sunset</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="onglet-contenu" id="onglet-jour2">
+          <div style="overflow-x:auto;">
+            <table class="tableau-programme">
+              <thead><tr><th>Heure</th><th>Session</th><th>Intervenant</th><th>Salle</th></tr></thead>
+              <tbody>
+                <tr><td class="heure-session">09h00</td><td><strong>Data Science pour marchés émergents</strong></td><td>Ngozi Eze</td><td>Grande Scène</td></tr>
+                <tr><td class="heure-session">10h30</td><td><strong>Design centré utilisateur en Afrique</strong></td><td>Yasmine Ben Ali</td><td>Salle Créa</td></tr>
+                <tr><td class="heure-session">12h00</td><td><strong>Pause déjeuner</strong></td><td>—</td><td>Espace Restauration</td></tr>
+                <tr><td class="heure-session">14h00</td><td><strong>Table ronde : Lever des fonds</strong><br/><small>4 fondateurs qui ont réussi</small></td><td>Panel investisseurs</td><td>Salle Alpha</td></tr>
+                <tr><td class="heure-session">15h30</td><td><strong>Cybersécurité africaine</strong></td><td>Ibrahim Traoré</td><td>Salle Beta</td></tr>
+                <tr><td class="heure-session">17h00</td><td><strong>Pitch Contest — Startups africaines</strong></td><td>Jury investisseurs</td><td>Grande Scène</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="onglet-contenu" id="onglet-jour3">
+          <div style="overflow-x:auto;">
+            <table class="tableau-programme">
+              <thead><tr><th>Heure</th><th>Session</th><th>Intervenant</th><th>Salle</th></tr></thead>
+              <tbody>
+                <tr><td class="heure-session">09h00</td><td><strong>Éducation numérique en Afrique</strong></td><td>Kofi Mensah</td><td>Grande Scène</td></tr>
+                <tr><td class="heure-session">10h30</td><td><strong>Cloud & DevOps</strong><br/><small>Industrialiser ses déploiements</small></td><td>David Okonkwo</td><td>Lab Technique</td></tr>
+                <tr><td class="heure-session">12h00</td><td><strong>Pause déjeuner</strong></td><td>—</td><td>Espace Restauration</td></tr>
+                <tr><td class="heure-session">14h00</td><td><strong>Atelier : No-code pour entrepreneur</strong></td><td>Yasmine Ben Ali</td><td>Salle Créa</td></tr>
+                <tr><td class="heure-session">15h30</td><td><strong>Annonce des lauréats du Pitch Contest</strong></td><td>Jury + Amara Diallo</td><td>Grande Scène</td></tr>
+                <tr><td class="heure-session">16h30</td><td><strong>Discours de clôture</strong></td><td>Amara Diallo</td><td>Grande Scène</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="thematiques" aria-label="Thématiques">
+      <div class="conteneur">
+        <div class="en-tete-section">
+          <span class="badge animer">Thématiques 2026</span>
+          <h2 class="titre-section animer">4 grands thèmes au cœur de l'édition</h2>
+        </div>
+        <div class="thematiques__grille">
+          <article class="thematique__carte animer"><div class="thematique__icone">🤖</div><h3>IA & Technologies</h3><p>Intelligence artificielle, machine learning et automatisation adaptés aux marchés africains.</p></article>
+          <article class="thematique__carte animer"><div class="thematique__icone">💼</div><h3>Business & Entrepreneuriat</h3><p>Financement, modèles économiques et stratégies de croissance en marché émergent.</p></article>
+          <article class="thematique__carte animer"><div class="thematique__icone">🎨</div><h3>Design & Expérience</h3><p>UX/UI pour utilisateurs africains, design inclusif et interfaces mobile first.</p></article>
+          <article class="thematique__carte animer"><div class="thematique__icone">📊</div><h3>Data & Infrastructure</h3><p>Science des données, cybersécurité et cloud souverain africain.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="conteneur">
+      <div class="footer__grille">
+        <div class="footer__colonne"><h4>AfriConnect Summit</h4><p>La conférence tech panafricaine annuelle.</p></div>
+        <div class="footer__colonne"><h4>Navigation</h4><nav class="footer__liens-rapides"><a href="index.html">Accueil</a><a href="programme.html">Programme</a><a href="intervenants.html">Intervenants</a><a href="contact.html">Inscription</a></nav></div>
+        <div class="footer__colonne"><h4>Contact</h4><p>Dakar, Sénégal<br/>contact@africonnect-summit.com</p></div>
+      </div>
+      <div class="footer__bas"><p>&copy; <span class="annee-dynamique"></span> AfriConnect Summit.</p></div>
+    </div>
+  </footer>
+  <button class="btn-haut" id="btn-haut" aria-label="Retourner en haut"><i class="bi bi-arrow-up"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

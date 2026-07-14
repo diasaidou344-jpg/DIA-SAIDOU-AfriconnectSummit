@@ -131,3 +131,63 @@ footer { background-color:var(--couleur-sombre); color:rgba(255,255,255,0.75); p
 .btn-haut { position:fixed; bottom:2rem; right:2rem; width:48px; height:48px; background-color:var(--couleur-primaire); color:#fff; border:none; border-radius:50%; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(26,124,94,0.4); transition:var(--transition); opacity:0; transform:translateY(20px); pointer-events:none; z-index:900; }
 .btn-haut.visible { opacity:1; transform:translateY(0); pointer-events:auto; }
 .btn-haut:hover { background-color:var(--couleur-secondaire); }
+
+/* ============================================================
+   Hero interne + fil d'Ariane - 14 juillet
+   ============================================================ */
+.hero-interne { padding:8rem var(--espacement-md) 4rem; background:linear-gradient(135deg,#0f1923 0%,#1a3a2e 100%); color:#fff; text-align:center; }
+.hero-interne h1 { font-family:var(--police-titre); font-size:clamp(2rem,5vw,3.5rem); font-weight:800; margin-bottom:1rem; animation:apparaitreBas 0.6s ease forwards; }
+.fil-ariane { display:flex; align-items:center; justify-content:center; gap:0.5rem; font-size:0.9rem; color:rgba(255,255,255,0.6); }
+.fil-ariane a { color:var(--couleur-secondaire); }
+.fil-ariane span { color:rgba(255,255,255,0.4); }
+
+/* Onglets */
+.programme { padding:var(--espacement-xl) 0; }
+.onglets { display:flex; gap:0.5rem; margin-bottom:var(--espacement-md); border-bottom:2px solid var(--bordure); }
+.onglet-btn { padding:0.85rem 2rem; background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-2px; font-family:var(--police-corps); font-size:0.95rem; font-weight:600; color:var(--texte-secondaire); cursor:pointer; transition:var(--transition); }
+.onglet-btn:hover { color:var(--couleur-primaire); }
+.onglet-btn.actif { color:var(--couleur-primaire); border-bottom-color:var(--couleur-primaire); }
+.onglet-contenu { display:none; animation:apparaitreBas 0.4s ease; }
+.onglet-contenu.actif { display:block; }
+
+/* Tableau programme */
+.tableau-programme { width:100%; border-collapse:collapse; font-size:0.9rem; }
+.tableau-programme th { background-color:var(--couleur-primaire); color:#fff; padding:1rem 1.5rem; text-align:left; font-weight:600; }
+.tableau-programme td { padding:1rem 1.5rem; border-bottom:1px solid var(--bordure); vertical-align:top; }
+.tableau-programme tbody tr:nth-child(even) { background-color:var(--fond-secondaire); }
+.tableau-programme tbody tr:hover { background-color:rgba(26,124,94,0.05); }
+.heure-session { font-weight:700; color:var(--couleur-primaire); white-space:nowrap; }
+
+/* Thématiques */
+.thematiques { padding:var(--espacement-xl) 0; background-color:var(--fond-secondaire); }
+.thematiques__grille { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--espacement-md); }
+.thematique__carte { background-color:var(--fond-carte); border:1px solid var(--bordure); border-radius:var(--radius-md); padding:var(--espacement-md); transition:var(--transition); }
+.thematique__carte:hover { border-color:var(--couleur-primaire); transform:translateY(-4px); box-shadow:0 8px 25px rgba(26,124,94,0.1); }
+.thematique__icone { font-size:2rem; margin-bottom:0.8rem; }
+.thematique__carte h3 { font-family:var(--police-titre); font-size:1.15rem; font-weight:700; margin-bottom:0.5rem; }
+.thematique__carte p { color:var(--texte-secondaire); font-size:0.9rem; }
+
+/* Intervenants vedettes */
+.intervenants-vedettes { padding:var(--espacement-xl) 0; background-color:var(--fond-secondaire); }
+.intervenants__grille { display:grid; grid-template-columns:repeat(4,1fr); gap:var(--espacement-md); margin-bottom:var(--espacement-md); }
+.intervenant__carte { background-color:var(--fond-carte); border:1px solid var(--bordure); border-radius:var(--radius-md); overflow:hidden; transition:var(--transition); text-align:center; }
+.intervenant__carte:hover { transform:translateY(-8px); box-shadow:0 15px 40px rgba(0,0,0,0.12); }
+.intervenant__carte img { width:100%; height:200px; object-fit:cover; }
+.intervenant__info { padding:var(--espacement-sm); }
+.intervenant__nom { font-family:var(--police-titre); font-size:1.05rem; font-weight:700; margin-bottom:0.25rem; }
+.intervenant__poste { font-size:0.85rem; color:var(--couleur-primaire); font-weight:500; margin-bottom:0.25rem; }
+.intervenant__pays { font-size:0.8rem; color:var(--texte-secondaire); }
+
+/* Sponsors */
+.sponsors { padding:var(--espacement-xl) 0; }
+.sponsors__niveau { margin-bottom:var(--espacement-md); text-align:center; }
+.sponsors__titre-niveau { font-family:var(--police-titre); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--texte-secondaire); margin-bottom:var(--espacement-sm); }
+.sponsors__logos { display:flex; justify-content:center; align-items:center; gap:var(--espacement-md); flex-wrap:wrap; }
+.sponsor__logo { border:1px solid var(--bordure); border-radius:var(--radius-md); background-color:var(--fond-carte); display:flex; align-items:center; justify-content:center; color:var(--texte-secondaire); font-weight:700; font-size:0.9rem; transition:var(--transition); }
+.sponsor__logo:hover { border-color:var(--couleur-primaire); color:var(--couleur-primaire); }
+.niveau-or .sponsor__logo { width:200px; height:80px; font-size:1.1rem; }
+.niveau-argent .sponsor__logo { width:160px; height:65px; }
+.niveau-bronze .sponsor__logo { width:130px; height:55px; font-size:0.85rem; }
+.reseaux-sociaux { display:flex; gap:0.8rem; margin-top:var(--espacement-sm); }
+.reseaux-sociaux a { width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); font-size:1rem; transition:var(--transition); }
+.reseaux-sociaux a:hover { border-color:var(--couleur-secondaire); color:var(--couleur-secondaire); transform:translateY(-3px); }
