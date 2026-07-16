@@ -191,3 +191,15 @@ footer { background-color:var(--couleur-sombre); color:rgba(255,255,255,0.75); p
 .reseaux-sociaux { display:flex; gap:0.8rem; margin-top:var(--espacement-sm); }
 .reseaux-sociaux a { width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); font-size:1rem; transition:var(--transition); }
 .reseaux-sociaux a:hover { border-color:var(--couleur-secondaire); color:var(--couleur-secondaire); transform:translateY(-3px); }
+
+/* ============================================================
+   Page intervenants + filtres - 16 juillet
+   ============================================================ */
+.intervenants-page { padding:var(--espacement-xl) 0; }
+.filtres { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:var(--espacement-md); justify-content:center; }
+.filtre-btn { padding:0.6rem 1.5rem; background:none; border:2px solid var(--bordure); border-radius:var(--radius-rond); font-family:var(--police-corps); font-size:0.85rem; font-weight:600; color:var(--texte-secondaire); cursor:pointer; transition:var(--transition); }
+.filtre-btn:hover { border-color:var(--couleur-primaire); color:var(--couleur-primaire); }
+.filtre-btn.actif { background-color:var(--couleur-primaire); border-color:var(--couleur-primaire); color:#fff; }
+.intervenants__grille-grande { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--espacement-md); }
+.intervenant__carte.cachee { display:none; }
+.tag-thematique { display:inline-block; padding:0.2rem 0.7rem; background-color:rgba(26,124,94,0.1); color:var(--couleur-primaire); border-radius:var(--radius-rond); font-size:0.75rem; font-weight:600; margin-top:0.5rem; }
