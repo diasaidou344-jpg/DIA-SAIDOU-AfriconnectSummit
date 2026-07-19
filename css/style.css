@@ -203,3 +203,44 @@ footer { background-color:var(--couleur-sombre); color:rgba(255,255,255,0.75); p
 .intervenants__grille-grande { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--espacement-md); }
 .intervenant__carte.cachee { display:none; }
 .tag-thematique { display:inline-block; padding:0.2rem 0.7rem; background-color:rgba(26,124,94,0.1); color:var(--couleur-primaire); border-radius:var(--radius-rond); font-size:0.75rem; font-weight:600; margin-top:0.5rem; }
+
+/* ============================================================
+   Page contact - formulaire, FAQ, Maps - 19 juillet
+   ============================================================ */
+.contact-section { padding:var(--espacement-xl) 0; }
+.contact__contenu { display:flex; gap:var(--espacement-xl); align-items:flex-start; }
+.contact__formulaire { flex:2; }
+.contact__infos { flex:1; min-width:280px; }
+.champ-groupe { margin-bottom:var(--espacement-sm); }
+.champ-groupe label { display:block; font-size:0.9rem; font-weight:600; margin-bottom:0.4rem; }
+.champ-groupe label.requis::after { content:' *'; color:var(--couleur-accent); }
+.champ-groupe input, .champ-groupe select, .champ-groupe textarea { width:100%; padding:0.85rem 1rem; border:2px solid var(--bordure); border-radius:var(--radius-md); font-family:var(--police-corps); font-size:0.95rem; background-color:var(--fond-carte); color:var(--texte-principal); transition:var(--transition); appearance:none; }
+.champ-groupe input:focus, .champ-groupe select:focus, .champ-groupe textarea:focus { outline:none; border-color:var(--couleur-primaire); box-shadow:0 0 0 3px rgba(26,124,94,0.1); }
+.champ-groupe input.valide, .champ-groupe select.valide, .champ-groupe textarea.valide { border-color:#22c55e; }
+.champ-groupe input.invalide, .champ-groupe select.invalide, .champ-groupe textarea.invalide { border-color:var(--couleur-accent); }
+.message-erreur { display:none; font-size:0.8rem; color:var(--couleur-accent); margin-top:0.3rem; }
+.message-erreur.visible { display:block; }
+.champ-groupe textarea { resize:vertical; min-height:130px; }
+.message-succes { display:none; background-color:rgba(34,197,94,0.1); border:2px solid #22c55e; border-radius:var(--radius-md); padding:var(--espacement-md); text-align:center; margin-top:var(--espacement-md); }
+.message-succes.visible { display:block; }
+.message-succes i { font-size:3rem; color:#22c55e; margin-bottom:1rem; }
+.message-succes h3 { font-family:var(--police-titre); font-size:1.4rem; margin-bottom:0.5rem; }
+.info-contact { background-color:var(--fond-secondaire); border:1px solid var(--bordure); border-radius:var(--radius-md); padding:var(--espacement-md); margin-bottom:var(--espacement-sm); }
+.info-contact i { font-size:1.5rem; color:var(--couleur-primaire); margin-bottom:0.5rem; display:block; }
+.info-contact h4 { font-weight:700; margin-bottom:0.3rem; }
+.info-contact p { font-size:0.9rem; color:var(--texte-secondaire); }
+.carte-maps { padding:var(--espacement-xl) 0; background-color:var(--fond-secondaire); }
+.carte-maps iframe { width:100%; height:400px; border:none; border-radius:var(--radius-md); }
+
+/* FAQ accordéon CSS pur */
+.faq { padding:var(--espacement-xl) 0; }
+.faq__liste { max-width:750px; margin:0 auto; }
+.faq__item { border:1px solid var(--bordure); border-radius:var(--radius-md); margin-bottom:0.8rem; overflow:hidden; }
+.faq__question { width:100%; padding:1.2rem var(--espacement-md); background-color:var(--fond-carte); border:none; text-align:left; font-family:var(--police-corps); font-size:0.95rem; font-weight:600; color:var(--texte-principal); cursor:pointer; display:flex; align-items:center; justify-content:space-between; transition:var(--transition); }
+.faq__question:hover { color:var(--couleur-primaire); }
+.faq__fleche { transition:transform 0.3s ease; color:var(--couleur-primaire); }
+.faq__reponse { max-height:0; overflow:hidden; transition:max-height 0.4s ease; background-color:var(--fond-secondaire); }
+.faq__reponse p { padding:var(--espacement-sm) var(--espacement-md); color:var(--texte-secondaire); font-size:0.95rem; line-height:1.7; }
+.faq__item:focus-within .faq__reponse { max-height:300px; }
+.faq__item:focus-within .faq__fleche { transform:rotate(180deg); }
+.faq__item:focus-within .faq__question { color:var(--couleur-primaire); }
