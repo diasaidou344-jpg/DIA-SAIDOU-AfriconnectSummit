@@ -244,3 +244,36 @@ footer { background-color:var(--couleur-sombre); color:rgba(255,255,255,0.75); p
 .faq__item:focus-within .faq__reponse { max-height:300px; }
 .faq__item:focus-within .faq__fleche { transform:rotate(180deg); }
 .faq__item:focus-within .faq__question { color:var(--couleur-primaire); }
+
+/* ============================================================
+   RESPONSIVE - Mobile 375px - 22 juillet
+   ============================================================ */
+@media (max-width: 768px) {
+  .hamburger { display:flex; }
+  .navbar__liens { position:fixed; top:0; right:-100%; width:75%; max-width:320px; height:100vh; background-color:var(--fond-principal); flex-direction:column; justify-content:center; padding:var(--espacement-lg); box-shadow:-5px 0 30px rgba(0,0,0,0.15); transition:right 0.35s ease; z-index:999; }
+  .navbar__liens.ouverte { right:0; }
+  .overlay-menu { position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:998; display:none; }
+  .overlay-menu.visible { display:block; }
+  .hamburger.ouvert span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+  .hamburger.ouvert span:nth-child(2) { opacity:0; }
+  .hamburger.ouvert span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+  .compte-rebours { flex-wrap:wrap; }
+  .compte-rebours__unite { min-width:70px; padding:0.8rem 1rem; }
+  .compte-rebours__nombre { font-size:1.8rem; }
+  .chiffres__grille { grid-template-columns:repeat(2,1fr); }
+  .intervenants__grille { grid-template-columns:1fr; }
+  .intervenants__grille-grande { grid-template-columns:1fr; }
+  .thematiques__grille { grid-template-columns:1fr; }
+  .contact__contenu { flex-direction:column; }
+  .footer__grille { flex-direction:column; }
+  .tableau-programme { font-size:0.8rem; }
+  .tableau-programme th, .tableau-programme td { padding:0.7rem 0.8rem; }
+}
+
+/* RESPONSIVE - Tablette 768px */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .intervenants__grille { grid-template-columns:repeat(2,1fr); }
+  .intervenants__grille-grande { grid-template-columns:repeat(2,1fr); }
+  .chiffres__grille { grid-template-columns:repeat(2,1fr); }
+  .contact__contenu { flex-direction:column; }
+}
